@@ -15,6 +15,9 @@ async function get3Pokemon() {
 	console.log(poke3.data);
 }
 
+
+
+
 get3Pokemon();
 
 function changeBodyColor(color, delay) {
@@ -26,4 +29,16 @@ function changeBodyColor(color, delay) {
 	});
 };
 
-changeBodyColor('teal', 1000);
+async function lightShow(){
+	const p1 = changeBodyColor('teal', 1000);
+	const p2 = changeBodyColor('pink', 1000);
+	const p3 = changeBodyColor('indigo', 1000);
+	const p4 = changeBodyColor('violet', 1000);
+
+	await p1;
+	await p2;
+	await p3;
+	await p4;
+}
+
+lightShow();
